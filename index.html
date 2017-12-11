@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet/less" href="./less/index.less">
+    <link rel="stylesheet" href="./iconfont/iconfont.css">
+    <script src="./lib/less/less.js"></script>
+
+    <title>慢慢Buy</title>
+</head>
+<body>
+    <header id="topBar">
+        <div class="logo pull-left">
+            <a href="#"><img src="./images/header_logo.png" alt=""></a>
+            <!-- <img src="./images/header_logo.png" alt=""> -->
+        </div>
+        <div class="appDownload pull-right">
+            <a href="#"><img src="./images/header_app.png" alt=""></a>
+        </div>
+    </header>
+    <form action="#" id="manSearch">
+        <div class="searchBox">
+            <input type="search" placeholder="请输入你想要比价的商品" class="search">
+            <input type="submit" class="submit" value="搜索">
+        </div>
+    </form>
+    <section id="navMenu">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-3">
+                    <a href="#">
+                        <img src="images/ic_search.png" alt="">
+                        <p>比价搜索</p>
+                    </a>
+                </div>
+                <div class="col-xs-3"></div>
+                <div class="col-xs-3"></div>
+                <div class="col-xs-3"></div>
+            </div>
+        </div>
+    </section>
+    <section id="common">
+        <a href="#">
+            <span class="common-title">超值折扣推荐</span>
+            <span class="common-more pull-right">
+                <img src="http://www.zuyushop.com/wap/images/more.png" alt="">
+            </span>
+        </a>
+    </section>
+    <section id="discount-content">
+        <ul>
+            <li>
+                <a href="#">
+                    <div class="imgPic pull-left">
+                        <img src="http://cacheimg.manmanbuy.com/r_img/cacheimg.aspx?width=600&amp;imgurl=http://a.manmanbuy.com:8013/cuxiaoPic/201610/201610001412282758.jpg" alt="移动端凑单品：海天 鲜味 生抽 1.28L">
+                    </div>
+                    <div class="imgInfo">
+                        <div class="img-title">移动端凑单品：海天 鲜味 生抽 1.28L <span class="price">10.9元</span></div>
+                        <div class="img-otherInfo">
+                            <span class="product-date pull-left">京东商城 | 10-25 14:10</span>
+                            <span class="product-comment">
+                                <i class="iconfont icon-xinxi"></i>
+                                有1人评论
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </section>
+    <section id="brandRanking">
+        <a href="#">
+            <span class="discount-title">品牌排行</span>
+            <span class="discount-more pull-right">
+                <img src="http://www.zuyushop.com/wap/images/more.png" alt="">
+            </span>
+        </a>
+    </section>
+    <footer id="footer">
+        <div class="footer-nav container-fluid">
+            <div class="row">
+                <div class="col-xs-4">登陆</div>
+                <div class="col-xs-4">注册</div>
+                <div class="col-xs-4"><i class="iconfont icon-jiantoushang"></i>返回顶部</div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p class="appDown-url">
+                <a href="http://m.manmanbuy.com/app.html?type=footword&value=wap" class="app">手机app下载</a>
+                <a href="http://m.manmanbuy.com" class="mobile">慢慢买手机版</a>
+                -- 掌上比价平台
+            </p>
+            <p class="manmanbuy-url">
+                <a href="m.manmanbuy.com">m.manmanbuy.com</a>
+            </p>
+        </div>
+    </footer>
+
+    
+<!-- 导航菜单模板 -->
+<script type="text/html" id="navMenuTmp">
+    {{each result as value index}}
+        <div class="col-xs-3">
+            <a href="{{value.titlehref}}">
+                {{#value.img}}
+                <p>{{value.name}}</p>
+            </a>
+        </div>
+    {{/each}}
+</script>
+<!-- 折扣产品模板 -->
+<script type="text/html" id="discountTmp">
+    {{each result as value index}}
+        <li>
+            <a href="#">
+                <div class="imgPic pull-left">
+                    {{#value.productImgSm}}
+                </div>
+                <div class="imgInfo">
+                    <div class="img-title">{{value.productName}}<span class="price">10.9元</span></div>
+                    <div class="img-otherInfo">
+                        <span class="product-date pull-left">{{value.productFrom}} | {{value.productTime}}</span>
+                        <span class="product-comment">
+                            <i class="iconfont icon-xinxi"></i>
+                            {{value.productComCount}}
+                        </span>
+                    </div>
+                </div>
+            </a>
+        </li>
+    {{/each}}
+</script>
+
+<script src="./lib/jquery/jquery.js"></script>
+<script src="./lib/bootstrap/js/bootstrap.js"></script>
+<script src="./lib/template/template.js"></script>
+<script src="./js/index.js"></script>
+</body>
+</html>

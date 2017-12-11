@@ -1,0 +1,95 @@
+
+@import './base.less';
+
+#productInfo {
+   .briefInfo {
+       padding: 10px;
+       .pic {
+           padding: 10px 0;
+           height: 180px;
+        //    background-color: skyblue;
+           text-align: center;
+           >img {
+               width: 160px;
+               height: 160px;
+           }
+       }
+       .title {
+           margin-top: 10px;
+           height: auto;
+           font-size: 16px;
+           text-align: center;
+           text-align-last: center;
+           word-break: break-all;
+           color: black;
+       }
+   }
+   .container {
+       border-top: 1px solid #c14d00;
+       border-bottom: 1px solid #c14d00;
+    //    margin-top: 10px;
+       background-color: #ffbb00;
+       
+       .row {
+           >div {
+               height: 34px;
+               color: #fff;
+               line-height: 34px;
+               text-align: center;
+               font-size: 16px;
+            //    background-color: orangered;
+               border-right: 1px solid #c14d00;
+               &:first-of-type {
+                   background-color: #ff9f21;
+               }
+           }
+       }
+   }
+   .otherInfo {
+       margin-top: 10px;
+       .red {
+           text-align: center;
+           color: red;
+       }
+   }
+   .safety {
+       margin-top: 8px;
+       padding-top: 10px;
+       height: 50px;
+       border-top: 1px solid #ccc;
+       font-size: 12px;
+       color: #adadad;
+       text-align: left;
+       text-align-last: left;
+   }
+   .nets-evalute {
+       height: 30px;
+       background-color: #dbdbdb;
+       text-align: center;
+       line-height: 30px;
+   }
+   .evalueList {
+       .evalue-item {
+           padding: 10px;
+           .content {
+            //    height: 200px;
+            //    background-color: pink;
+               .name-date {
+                   font-size: 14px;
+                   color: #999;
+               }
+               .evaluteFrom {
+                   margin-top: 10px;
+                   font-size: 14px;
+                   .comFrom {
+                       color: #666;
+                   }
+               }
+               .comContent {
+                   margin-top: 10px;
+                   margin-bottom: 10px;
+               }
+           }
+       }
+   }
+}

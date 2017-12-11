@@ -1,0 +1,144 @@
+
+@import './base.less';
+
+#main-product {
+    .product-content {
+        padding: 4px 10px;
+        // height: 2000px;
+        // background-color: skyblue;
+        .title {
+            // background-color: pink;
+            font-size: 18px;
+            margin: 10px auto 5px auto;
+            font-weight: 800;
+            text-align: left;
+            text-align-last: left;
+            word-break: break-all;
+            color: #5a5a5a;
+            line-height: normal;
+        }
+        .info {
+            margin: 12px auto;
+            color: #999999;
+            font-size: 12px;
+            // background-color: pink;
+            .comCount {
+                color: #4682c5;
+                margin-left: 10px;
+            }
+        }
+        .content {
+            .picture {
+                float: right;
+                margin: 12px auto auto 10px;
+                overflow: hidden;
+                width: 120px;
+                >img {
+                    width: 120px;
+                    height: 120px;
+                }
+            }
+            .conn {
+                font-size: 16px;
+                word-break: break-all;
+                line-height: 24px;
+                color: #606060;
+                padding-bottom: 20px;
+                .bigImg {
+                    >img {
+                        max-width: 100%;
+                        height: auto;
+                        vertical-align: middle;
+                        border: 0;
+                    }
+                }
+            }
+        }
+        .goShopping {
+            >a {
+                display: block;
+                width: 100%;
+                height: 40px;
+                line-height: 40px;
+                background-color: #ff9000;
+                text-align: center;
+                color: #fff;
+                border-radius: 5px;
+            }
+        }
+        .productComment {
+            .cu-content-pl {
+                // width: 100%;
+                .tit {
+                    margin-top: 20px;
+                    font-size: 16px;
+                }
+                .reply {
+                    margin-top: 10px;
+                    >.form {
+                        >textarea {
+                            width: 100%;
+                            height: 68px;
+                            border: none;
+                            border: 1px solid #ccc;
+                        }
+                    }
+                }
+                .tit {
+                    margin-bottom: 10px;
+                }
+                .ctrl {
+                    height: 40px;
+                    background-color: #fff;
+                    margin-top: -5px;
+                    border: 1px solid #ccc;
+                    border-top: none;
+                    position: relative;
+                    >input {
+                        // float: right;
+                        position: absolute;
+                        right: 0;
+                        bottom: 0;
+                        background-color: #ff841d;
+                        height: 40px;
+                        width: 100px;
+                        color: #fff;
+                        font-size: 16px;
+                    }
+                }
+                .list {
+                    >ul {
+                        >li {
+                            height: auto;
+                            margin-top: 20px;
+                            .userimg {
+                                width: 40px;
+                                height: 40px;
+                                border-radius: 50%;
+                                float: left;
+                                >img {
+                                    width: 100%;
+                                }
+                            }
+                            .con {
+                                .name {
+                                    .username {
+                                        color: #68a0c6;
+                                    }
+                                    .time {
+                                        text-align: right;
+                                        margin-top: -20px;
+                                        color: #a7969a;
+                                    }
+                                }
+                                .content {
+                                    margin-top: -18px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

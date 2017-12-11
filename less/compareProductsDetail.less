@@ -1,0 +1,106 @@
+/*  比价搜索分类列表商品类点进去的商品详情页  */
+
+@import './base.less';
+
+/* 3级菜单栏 */
+#thirdMenu {
+    height: 36px;
+    line-height: 36px;
+    background-color: #f3f3f3;
+    >a {
+        font-size: 12px;
+        &:first-of-type {
+            margin-left: 5px;
+        }
+    }
+    .sift {
+        float: right;
+        width: 50px;
+        height: 30px;
+        background-color: #e1e1e1;
+        line-height: 30px;
+        margin-top: 3px;
+        margin-right: 10px;
+        border-radius: 10px;
+    }
+}
+
+/* 商品列表栏 */
+#goods {
+    >ul {
+        >li {
+            padding: 10px 8px;
+            >a {
+                display: block;
+                width: 100%;
+                height: 120px;
+                // background-color: pink;
+                .item-pic {
+                    width: 120px;
+                    height: 100%;
+                    float: left;
+                    // background-color: skyblue;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+                .item-info {
+                    margin-left: 130px;
+                    height: 100%;
+                    // background-color: skyblue;
+                    position: relative;
+                    .title {
+                        height: auto;
+                        line-height: 26px;
+                        color: black;
+                    }
+                    .price {
+                        font-size: 18px;
+                        color: red;
+                        // line-height: 26px;
+                        position: absolute;
+                        left: 0;
+                        bottom: 20px;
+                    }
+                    .other {
+                        width: 100%;
+                        color: #a1a1a1;
+                        font-size: 12px;
+                        // margin-top: 10px;
+                        position: absolute;
+                        left: 0;
+                        bottom: 0;
+                        .comment {
+                            float: right;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+#pagination {
+    width: 100%;
+    >.btn-group {
+        height: 34px;
+        width: 100%;
+        .pre-btn {
+            position: absolute;
+            left: 0;
+        }
+        .select-box {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .next-btn {
+            // float: right;
+            position: absolute;
+            right: 0;
+            
+        }
+    }  
+}

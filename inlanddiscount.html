@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>国内折扣</title>
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./lib/mui/css/mui.min.css">
+    <link rel="stylesheet/less" href="./less/inlanddiscount.less">
+    <script src="./lib/less/less.js"></script>
+</head>
+
+<body>
+    <div class="gn_container">
+        <div class="gn_header">
+            <a href="javascript:void(0)">
+                <i class="glyphicon glyphicon-menu-left"></i>
+            </a>
+            <h4>国内折扣</h4>
+            <a href="javascript:void(0)">
+                <img src="./images/header_app.png" alt="">
+            </a>
+        </div>
+        <div class="gn_content">
+            <div class="mui-scroll-wrapper">
+                <div class="mui-scroll">
+                    <!--这里放置真实显示的DOM内容-->
+                    <ul>
+                        <li>
+                            <a href="javascript:void(0)">
+                                <div class="pic">
+                                    <img src="http://img10.360buyimg.com/n7/jfs/t1720/256/513904188/195330/ce31e971/55d2cf3eNc2d117d0.jpg" alt="">
+                                </div>
+
+                                <p class="productName">西域美农新疆特产五星和田红枣250g*2</p>
+                                <p class="productPrice">19.8元(5件99元)</p>
+                                <div class="info">
+                                    <span class="productFrom">京东商城</span> |
+                                    <span class="productTime">10-22 13:28</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)">
+                                <img src="" alt="">
+                                <p class="productName"></p>
+                                <p class="productPrice"></p>
+                                <span class="info">
+                                    <span class="productFrom"></span>
+                                    <span class="productTime"></span>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)">
+                                <img src="" alt="">
+                                <p class="productName"></p>
+                                <p class="productPrice"></p>
+                                <span class="info">
+                                    <span class="productFrom"></span>
+                                    <span class="productTime"></span>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)">
+                                <img src="" alt="">
+                                <p class="productName"></p>
+                                <p class="productPrice"></p>
+                                <span class="info">
+                                    <span class="productFrom"></span>
+                                    <span class="productTime"></span>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)">
+                                <img src="" alt="">
+                                <p class="productName"></p>
+                                <p class="productPrice"></p>
+                                <span class="info">
+                                    <span class="productFrom"></span>
+                                    <span class="productTime"></span>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)">
+                                <img src="" alt="">
+                                <p class="productName"></p>
+                                <p class="productPrice"></p>
+                                <span class="info">
+                                    <span class="productFrom"></span>
+                                    <span class="productTime"></span>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+        <div class="gn_footer">
+            <div class="footer-nav container-fluid">
+                <div class="row">
+                    <div class="col-xs-4">登陆</div>
+                    <div class="col-xs-4">注册</div>
+                    <div class="col-xs-4">
+                        <i class="iconfont icon-jiantoushang"></i>返回顶部</div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="appDown-url">
+                    <a href="http://m.manmanbuy.com/app.html?type=footword&value=wap" class="app">手机app下载</a>
+                    <a href="http://m.manmanbuy.com" class="mobile">慢慢买手机版</a>
+                    -- 掌上比价平台
+                </p>
+                <p class="manmanbuy-url">
+                    <a href="m.manmanbuy.com">m.manmanbuy.com</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
+
+<script type="text/html" id="discountTmp">
+    {{each result as value index}}
+        <li data-productId="{{value.productId}}">
+            <a href="javascript:void(0)">
+                <div class="pic">
+                    {{#value.productImg}}
+                </div>
+
+                <p class="productName">{{value.productName}}</p>
+                <p class="productPrice">{{value.productPrice}}</p>
+                <div class="info">
+                    <span class="productFrom">{{value.productFrom}}</span> |
+                    <span class="productTime">{{value.productTime}}</span>
+                </div>
+            </a>
+        </li>
+    {{/each}}
+</script>
+
+<script src="./lib/jquery/jquery.min.js"></script>
+<script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="./lib/mui/js/mui.min.js"></script>
+<script src="./lib/template/template.js"></script>
+<script src="./js/inlanddiscount.js"></script>

@@ -1,0 +1,192 @@
+
+@import 'base.less';
+
+/* 顶部通栏 */
+#topBar {
+    height: 51px;
+    background-color: @main-color;
+    border-bottom: 1px solid #e6e6e6;
+    .logo {
+        width: 75%;
+        height: 100%;
+        padding: 12px;
+        margin-left: 5px;
+        // background-color: skyblue;
+        >a {
+            display: block;
+            height: 100%;
+            // background-color: #fff;
+            >img {
+                height: 100%;
+            }
+        }
+    }
+    .appDownload {
+        padding: 8px;
+        >a {
+            img {
+                max-width: 34px;
+            }
+        }
+    }
+}
+/* 搜索栏 */
+#manSearch {
+    display: block;
+    height: 51px;
+    // background-color: skyblue;
+    border-bottom: 1px solid #e6e6e6;
+    padding: 10px;
+    .searchBox {
+        width: 100%;
+        height: 100%;
+        // background-color: pink;
+        position: relative;
+        >input.search {
+            display: block;
+            height: 100%;
+            border-radius: 15px;
+            background-color: #f1f1f1;
+            padding-left: 5%;
+            width: 100%;
+        }
+        >input.submit {
+            display: block;
+            position: absolute;
+            height: 100%;
+            width: 18%;
+            right: 0;
+            top: 0;
+            background-color: @main-color;
+            border-radius: 15px;
+            color: #fff;
+            font-size: 16px;
+        }
+    }
+}
+/* 导航菜单栏 */
+#navMenu {
+    .container-fluid{
+        height: 200px;
+        overflow: hidden;
+        &.open {
+            // 显示最后一行
+            height: 300px;
+        }
+        >.row {
+            >div {
+                height: 100px;
+                text-align: center;
+                >a {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    text-decoration: none;
+                    >img {
+                        width: 50px;
+                        margin-top: 20px;
+                    }
+                    >p {
+                        margin-top: 5px;
+                        color: #5a5a5a;
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* 超值折扣内容栏 */
+#discount-content {
+    >ul {
+        >li {
+            padding: 14px 8px;
+            position: relative;
+            // background-color: pink;
+            border-bottom: 1px solid #ccc;
+            >a {
+                display: block;
+                width: 100%;
+                height: 100px;
+                // background-color: skyblue;
+                .imgPic {
+                    width: 110px;
+                    height: 100%;
+                    >img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+                .imgInfo {
+                    height: 100%;
+                    margin-left: 115px;
+                    // background-color: olivedrab;
+                    position: relative;
+                    .img-title {
+                        height: auto;
+                        // background-color: skyblue;
+                        line-height: 20px;
+                        font-size: 16px;
+                        color: #333;
+                        >span.price {
+                            color: @main-color;
+                        }
+                    }
+                    .img-otherInfo {
+                        height: auto;
+                        width: 100%;
+                        position: absolute;
+                        left: 0;
+                        bottom: 0;
+                        .product-date {
+                            height: 24px;
+                            width: auto;
+                            color: #a1a1a1;
+                            font-size: 12px;
+                            line-height: 24px;
+                        }
+                        .product-comment {
+                            float: right;
+                            line-height: 24px;
+                            font-size: 12px;
+                            >i {
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+#brandRanking {
+    height: 40px;
+    background-color: #ff9f22;
+    >a {
+        width: 100%;
+        height: 100%;
+        display: block;
+        .discount-title {
+            display: inline-block;
+            height: 100%;
+            width: auto;
+            line-height: 40px;
+            color: #fff;
+            font-weight: 900;
+            font-size: 18px;
+            margin-left: 10px;
+        }
+        .discount-more {
+            width: 40px;
+            height: 40px;
+            display: inline-block;
+            text-align: center;
+            line-height: 40px;
+            >img {
+                width: 20px;
+            }
+        }
+    }
+}

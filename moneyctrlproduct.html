@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet/less" href="./less/moneyctrlproduct.less">
+    <link rel="stylesheet" href="./iconfont/iconfont.css">
+    <link rel="stylesheet" href="./iconfont2/iconfont.css">
+    <script src="./lib/less/less.js"></script>
+    <title>国内折扣详情页</title>
+</head>
+<body>
+    <header id="topBar-small">
+        <a href="#" class="icon-left pull-left">
+            <i class="glyphicon glyphicon-menu-left"></i>
+        </a>
+        <div class="topBar-title">国内折扣</div>
+        <div class="appDownload pull-right">
+            <a href="#"><img src="./images/header_app.png" alt=""></a>
+        </div>
+    </header>
+    <section id="main-product">
+        <div class="product-content">
+            <div class="title">移动端凑单品：海天 鲜味 生抽 1.28L</div>
+            <div class="info">
+                <span class="from">京东商城</span>
+                <span class="time">10-25 14:10</span>
+                <span class="tips">小编烟火 / 慢慢买</span>
+                <span class="comCount">有1人评论</span>
+            </div>
+            <div class="content">
+                <div class="picture">
+                    <img src="http://cacheimg.manmanbuy.com/r_img/cacheimg.aspx?width=600&amp;imgurl=http://a.manmanbuy.com:8013/cuxiaoPic/201610/201610001412282758.jpg" alt="移动端凑单品：海天 鲜味 生抽 1.28L">
+                </div>
+                <div class="conn">
+                    <p class="productInfo2">天猫国际现预售价225元，定金25元，膨胀后可抵用40元，这样尾款仅需支付185元，相当于210元到手。\n\n\n\t \n\n\n\t尤妮佳这款纸尿裤轻薄透气，吸水性强，触感柔软。贴心的防漏构造，宝宝怎么翻身都不怕会脏床咯~同时，也能很好的呵护宝宝的腿部肌肤，不给宝宝带来任何的束缚感，宝宝就能更愉快的玩耍了。M码适合6-11kg的宝贝</p>
+                    <p class="productInfo">天猫国际现预售价225元，定金25元，膨胀后可抵用40元，这样尾款仅需支付185元，相当于210元到手</p>
+                    <p class="bigImg">
+                        <img src="http://img10.360buyimg.com/n1/g13/M08/03/19/rBEhVFHUCF0IAAAAAAE6WA-oszMAAAvVQFF8CgAATpw626.jpg" alt="">
+                    </p>
+                </div>
+            </div>
+            <div class="goShopping">
+                <a href="#"><i class="iconfont icon-gouwuche1"></i>前往购买</a>
+            </div>
+            <div class="productComment"></div>
+        </div>
+    </section>
+
+
+    <footer id="footer">
+        <div class="footer-nav container-fluid">
+            <div class="row">
+                <div class="col-xs-4">登陆</div>
+                <div class="col-xs-4">注册</div>
+                <div class="col-xs-4"><i class="iconfont icon-jiantoushang"></i>返回顶部</div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p class="appDown-url">
+                <a href="http://m.manmanbuy.com/app.html?type=footword&value=wap" class="app">手机app下载</a>
+                <a href="http://m.manmanbuy.com" class="mobile">慢慢买手机版</a>
+                -- 掌上比价平台
+            </p>
+            <p class="manmanbuy-url">
+                <a href="m.manmanbuy.com">m.manmanbuy.com</a>
+            </p>
+        </div>
+    </footer>
+
+    <script type="text/html" id="infoTmp">
+        {{each result as value index}}
+            <div class="info">
+                <span class="from">{{value.productFrom}}</span>
+                <span class="time">{{value.productTime}}</span>
+                <span class="tips">{{value.productTips}}</span>
+                <span class="comCount">{{value.productComCount}}</span>
+            </div>
+        {{/each}}
+    </script>
+    <script type="text/html" id="pictureTmp">
+        {{each result as value index}}
+            {{#value.productImgSm}}
+        {{/each}}
+    </script>
+    <script type="text/html" id="connTmp">
+        {{each result as value index}}
+            <p class="productInfo2">{{value.productInfo2}}</p>
+            <p class="productInfo">{{value.productInfo}}</p>
+            <p class="bigImg">
+                {{#value.productImgSm}}
+            </p>
+        {{/each}}
+    </script>
+    <script type="text/html" id="productCommentTmp">
+        {{each result as value index}}
+            {{#value.productComment}}
+        {{/each}}
+    </script>
+    
+<script src="./lib/jquery/jquery.js"></script>
+<script src="./lib/bootstrap/js/bootstrap.js"></script>
+<script src="./lib/template/template.js"></script>
+<script src="./js/moneyctrlproduct.js"></script>
+
+</body>
+</html>

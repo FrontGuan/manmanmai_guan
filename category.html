@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet/less" href="./less/category.less">
+    <link rel="stylesheet" href="./iconfont/iconfont.css">
+    <link rel="stylesheet" href="./lib/mui/css/mui.css">
+    <link rel="stylesheet" href="./lib/mui/fonts/mui.ttf">
+    <script src="./lib/less/less.js"></script>
+    <title>比价搜索</title>
+</head>
+
+<body>
+    <header id="topBar">
+        <div class="logo pull-left">
+            <a href="#">
+                <img src="./images/header_logo.png" alt="">
+            </a>
+            <!-- <img src="./images/header_logo.png" alt=""> -->
+        </div>
+        <div class="appDownload pull-right">
+            <a href="#">
+                <img src="./images/header_app.png" alt="">
+            </a>
+        </div>
+    </header>
+    <form action="#" id="manSearch">
+        <div class="searchBox">
+            <input type="text" placeholder="请输入你想要比价的商品" class="search">
+            <input type="submit" class="submit" value="搜索">
+        </div>
+    </form>
+    <div class="mui-content" id="mui-content">
+        <div class="mui-card">
+            <ul class="mui-table-view">
+                <li class="mui-table-view-cell mui-collapse">
+                    <a class="mui-navigate-right" href="#">表单</a>
+                    <div class="mui-collapse-content">
+
+
+                    </div>
+                </li>
+                <li class="mui-table-view-cell mui-collapse">
+                    <a class="mui-navigate-right" href="#">图片轮播</a>
+                    <div class="mui-collapse-content">
+
+                    </div>
+                </li>
+                <li class="mui-table-view-cell mui-collapse">
+                    <a class="mui-navigate-right" href="#">文字排版</a>
+                    <div class="mui-collapse-content">
+                        <h1>h1. Heading</h1>
+                        <h2>h2. Heading</h2>
+                        <h3>h3. Heading</h3>
+                        <h4>h4. Heading</h4>
+                        <h5>h5. Heading</h5>
+                        <h6>h6. Heading</h6>
+                        <p>
+                            p. 目前最接近原生App效果的框架。
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <footer id="footer">
+        <div class="footer-nav container-fluid">
+            <div class="row">
+                <div class="col-xs-4">登陆</div>
+                <div class="col-xs-4">注册</div>
+                <div class="col-xs-4"><i class="iconfont icon-jiantoushang"></i>返回顶部</div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p class="appDown-url">
+                <a href="http://m.manmanbuy.com/app.html?type=footword&value=wap" class="app">手机app下载</a>
+                <a href="http://m.manmanbuy.com" class="mobile">慢慢买手机版</a>
+                -- 掌上比价平台
+            </p>
+            <p class="manmanbuy-url">
+                <a href="m.manmanbuy.com">m.manmanbuy.com</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- 手风琴标题模板 -->
+    <script type="text/html" id="collapseTmp">
+        {{each result as value index}}
+            <li class="mui-table-view-cell mui-collapse" data-titleId="{{value.titleId}}">
+                <a class="mui-navigate-right" href="#">{{value.title}}</a>
+                <div class="mui-collapse-content">
+                    <div class="container-fulid">
+                        <div class="row">
+                            <div class="col-xs-4"></div>
+                            <div class="col-xs-4"></div>
+                            <div class="col-xs-4"></div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        {{/each}}
+    </script>
+    <!-- 手风琴标题对应的内容模板 -->
+    <script type="text/html" id="contentTmp">
+        {{each result as value index}}
+            <div class="col-xs-4" data-categoryid="{{value.categoryId}}">{{value.category}}</div>
+        {{/each}}
+    </script>
+
+    <script src="./lib/jquery/jquery.js"></script>
+    <script src="./lib/bootstrap/js/bootstrap.js"></script>
+    <script src="./lib/template/template.js"></script>
+    <script src="./lib/mui/js/mui.js"></script>
+    <script src="./js/category.js"></script>
+</body>
+
+</html>

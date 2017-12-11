@@ -1,0 +1,337 @@
+/* 原生移动web没有用框架 公共样式也要自己写 */
+
+* {
+  margin: 0;
+  padding: 0;
+  /* 防止移动页面被padding和border撑开滚动条 */
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #666;
+  /* 当手指按住a的时候会有蓝色高亮背景色 */
+  -webkit-tap-highlight-color: transparent;
+}
+
+input {
+  border: 0;
+  /* 内边框 */
+  outline: 0;
+}
+
+img {
+  /* 让图片和文字对齐 不会出现图片底部3px的问题 */
+  vertical-align: middle;
+}
+
+i {
+  font-style: normal;
+}
+
+
+/* 公共类 */
+
+.pull-left {
+  float: left;
+}
+
+.pull-right {
+  float: right;
+}
+
+.clearfix::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.bl{
+  border-left: 1px solid #ccc;
+}
+
+.br{
+  border-right: 1px solid #ccc;
+}
+.bt{
+  border-top: 1px solid #ccc;
+}
+.bb{
+  border-bottom: 1px solid #ccc;
+}
+
+/* 顶部通栏公共样式 */
+#topBar {
+  height: 51px;
+  background-color: @main-color;
+  border-bottom: 1px solid #e6e6e6;
+  .logo {
+      width: 75%;
+      height: 100%;
+      padding: 12px;
+      margin-left: 5px;
+      // background-color: skyblue;
+      >a {
+          display: block;
+          height: 100%;
+          // background-color: #fff;
+          >img {
+              height: 100%;
+          }
+      }
+  }
+  .appDownload {
+      padding: 8px;
+      >a {
+          img {
+              max-width: 34px;
+          }
+      }
+  }
+}
+
+/* 子网页小顶部公共样式 */
+#topBar-small{
+    height: 45px;
+    background-color: #ff8b00;
+    border-bottom: 1px solid #dadada;
+    text-align: center;
+    position: relative;
+    .icon-left {
+        position: absolute;
+        height: 100%;
+        padding: 12px;
+        left: 5px;
+        >i {
+            font-size: 20px;
+            color: #fff;
+        }   
+    }
+    .topBar-title {
+        height: 100%;
+        line-height: 44px;
+        color: #fff;
+        font-size: 20px;
+    }
+    .appDownload {
+        position: absolute;
+        right: 5px;
+        top: 5px;
+        // padding: 8px;
+        >a {
+            img {
+                max-width: 34px;
+            }
+        }
+    }
+}
+
+/* 一些子网页商品折扣内容栏公共样式 */
+#discount-content-common {
+    >ul {
+        >li {
+            padding: 14px 8px;
+            position: relative;
+            // background-color: pink;
+            border-bottom: 1px solid #ccc;
+            >a {
+                display: block;
+                width: 100%;
+                height: 100px;
+                // background-color: skyblue;
+                .imgPic {
+                    width: 110px;
+                    height: 100%;
+                    >img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+                .imgInfo {
+                    height: 100%;
+                    margin-left: 115px;
+                    // background-color: olivedrab;
+                    position: relative;
+                    .img-title {
+                        height: auto;
+                        // background-color: skyblue;
+                        line-height: 20px;
+                        font-size: 16px;
+                        color: #333;
+                        >span.price {
+                            color: @main-color;
+                        }
+                    }
+                    .img-otherInfo {
+                        height: auto;
+                        width: 100%;
+                        position: absolute;
+                        left: 0;
+                        bottom: 0;
+                        .product-date {
+                            height: 24px;
+                            width: auto;
+                            color: #a1a1a1;
+                            font-size: 12px;
+                            line-height: 24px;
+                        }
+                        .product-comment {
+                            float: right;
+                            line-height: 24px;
+                            font-size: 12px;
+                            >i {
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* 搜索栏 公共样式 */
+#manSearch {
+    display: block;
+    height: 51px;
+    // background-color: skyblue;
+    background-color: #fff;
+    border-bottom: 1px solid #e6e6e6;
+    padding: 10px;
+    .searchBox {
+        width: 100%;
+        height: 100%;
+        // background-color: pink;
+        position: relative;
+        >input.search {
+            display: block;
+            height: 100%;
+            border-radius: 15px;
+            background-color: #f1f1f1;
+            padding-left: 5%;
+            width: 100%;
+        }
+        >input.submit {
+            display: block;
+            position: absolute;
+            height: 100%;
+            width: 18%;
+            right: 0;
+            top: 0;
+            background-color: @main-color;
+            border-radius: 15px;
+            color: #fff;
+            font-size: 16px;
+        }
+    }
+}
+
+/* 3级菜单栏公共样式 */
+#thirdMenu {
+    height: 36px;
+    line-height: 36px;
+    background-color: #f3f3f3;
+    >a {
+        font-size: 14px;
+        &:first-of-type {
+            margin-left: 5px;
+        }
+    }
+    .sift {
+        float: right;
+        width: 50px;
+        height: 30px;
+        background-color: #e1e1e1;
+        line-height: 30px;
+        margin-top: 3px;
+        margin-right: 10px;
+        border-radius: 10px;
+    }
+}
+
+
+/* 公共样式 */
+#common {
+  height: 40px;
+  background-color: #ff9f22;
+  >a {
+      width: 100%;
+      height: 100%;
+      display: block;
+      .common-title {
+          display: inline-block;
+          height: 100%;
+          width: auto;
+          line-height: 40px;
+          color: #fff;
+          font-weight: 900;
+          font-size: 18px;
+          margin-left: 10px;
+      }
+      .common-more {
+          width: 40px;
+          height: 40px;
+          display: inline-block;
+          text-align: center;
+          line-height: 40px;
+          >img {
+              width: 20px;
+          }
+      }
+  }
+}
+
+/* 页面底部公共样式 */
+#footer {
+  margin-top: 10px;
+  background-color: #efefef;
+  .footer-nav {
+      background: #efefef;
+      border-top: 1px solid #c4c4c4;
+      border-bottom: 1px solid #c4c4c4;
+      height: 34px;
+      line-height: 34px;
+      // margin-top: 25px;
+      // clear: both;
+      .row {
+          height: 100%;
+          >div {
+              text-align: center;
+              border-right: 1px solid #ccc;
+              cursor: pointer;
+              // position: relative;
+              img {
+                  // position: absolute;
+                  width: 15px;
+                  height: 15px;
+                  // top: 10px;
+              }
+          }
+      }
+  }
+  .footer-bottom {
+      padding: 15px 0;
+      a {
+        text-decoration: none;
+        color: #5a5a5a;
+      }
+      .appDown-url {
+          text-align: center;
+          margin: 0;
+          .app {
+              color: red;
+          }
+      }
+      .manmanbuy-url {
+          text-align: center;
+          margin: 0;
+      }
+  }
+}
+
+/* 定义全局变量 */
+
+@main-color: #ff841d;

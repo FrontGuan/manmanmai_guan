@@ -1,0 +1,68 @@
+
+@import './base.less';
+
+
+#manSearch {
+    .searchBox {
+        .submit {
+            line-height: 20px;
+        }
+        input {
+            outline: none;
+            border: none;
+            font-size: 14px;
+        }
+    }
+}
+
+#mui-content {
+    width: 100%;
+    .mui-card {
+        margin: 5px;
+        .mui-table-view {
+            >li {
+                >a {
+                    font-weight: 900;
+                    font-size: 16px;
+                    text-decoration: none;
+                }
+                .mui-collapse-content {
+                    margin-top: -10px;
+                    .container-fulid {
+                        .row {
+                            >div {
+                                height: 40px;
+                                padding: 0;
+                                line-height: 40px;
+                                // background-color: skyblue;
+                                border-right: 1px solid #ccc;
+                                border-bottom: 1px solid #ccc;
+                                text-align: center;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .mui-table-view-cell::after {
+        left: 0;
+    }
+}
+
+
+#footer {
+    .footer-nav {
+        .row {
+            >div {
+                font-size: 14px;
+                color: #5a5a5a;
+            }
+        }
+    }
+    .footer-bottom {
+        .appDown-url {
+            font-size: 12px;
+        }
+    }
+}

@@ -1,0 +1,41 @@
+@import './base.less';
+body {
+    background-color: #f2f2f2;
+}
+#thirdMenu {
+    background-color: #f8f8f8;
+    border-bottom: 1px solid #ccc;
+}
+#main {
+    .title {
+        margin: 10px 5px;
+        height: 40px;
+        // background-color: pink;
+        padding-left: 10px;
+        border: 1px solid #ccc;
+        font-size: 16px;
+        color: #874604;
+        line-height: 40px;
+    }
+    .content {
+        padding: 0 10px;
+        .item {
+            height: 40px;
+            border-bottom: 1px solid #ccc;
+            >a {
+                display: block;
+                width: 100%;
+                height: 100%;
+                text-decoration: none;
+                color: #000;
+                font-size: 16px;
+                line-height: 40px;
+                font-weight: 700;
+                >i {
+                    float: right;
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+}

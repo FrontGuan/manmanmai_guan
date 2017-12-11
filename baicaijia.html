@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet/less" href="./less/baicaijia.less">
+    <link rel="stylesheet" href="./iconfont/iconfont.css">
+    <script src="./lib/less/less.js"></script>
+    <title>白菜价</title>
+</head>
+<body>
+    <header id="topBar-small">
+        <a href="#" class="icon-left pull-left">
+            <i class="glyphicon glyphicon-menu-left"></i>
+        </a>
+        <div class="topBar-title">白菜价</div>
+        <div class="appDownload pull-right">
+            <a href="#"><img src="./images/header_app.png" alt=""></a>
+        </div>
+    </header>
+    <div id="wrapper">
+        <ul>
+            <li class="active"><a href="">全部1</a></li>
+           
+        </ul>
+    </div>
+    <section id="baicaijia-product">
+        <ul>
+            <li>
+                <div class="content">
+                    <div class="imgPic pull-left">
+                        <img src="https://gd2.alicdn.com/imgextra/i2/2551982558/TB2H6XhamiJ.eBjSspiXXbqAFXa_!!2551982558.jpg_400x400.jpg">
+                    </div>
+                    <div class="imgInfo">
+                        <div class="img-title"><span class="b">[包邮]</span>多功能车载手机支架仪表台 </div>
+                        <div class="price"><i>券后</i><em>¥</em>10.0<del>¥25</del></div>
+            
+                        <div class="bar clearfix"><a href="http://shop.m.taobao.com/shop/coupon.htm?activityId=27a14c9fc6bb4a48b917d567fcf8f664&amp;sellerId=2246833798" class="goquan" target="_blank"></a><i><em style="width:1%;"></em><span>1%</span></i><b>已领82张</b></div>
+                        <div class="productCoupon"><a href="http://shop.m.taobao.com/shop/coupon.htm?activityId=27a14c9fc6bb4a48b917d567fcf8f664&amp;sellerId=2246833798" target="_blank">点此领15元优惠券</a></div> 
+                        <div class="productHref"><a biz-itemid="536053384174" isconvert="1" href="https://item.taobao.com/item.htm?id=536053384174" target="_blank">下单链接</a></div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </section>
+
+
+    <footer id="footer">
+        <div class="footer-nav container-fluid">
+            <div class="row">
+                <div class="col-xs-4">登陆</div>
+                <div class="col-xs-4">注册</div>
+                <div class="col-xs-4"><i class="iconfont icon-jiantoushang"></i>返回顶部</div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p class="appDown-url">
+                <a href="http://m.manmanbuy.com/app.html?type=footword&value=wap" class="app">手机app下载</a>
+                <a href="http://m.manmanbuy.com" class="mobile">慢慢买手机版</a>
+                -- 掌上比价平台
+            </p>
+            <p class="manmanbuy-url">
+                <a href="m.manmanbuy.com">m.manmanbuy.com</a>
+            </p>
+        </div>
+    </footer>
+
+    <script type="text/html" id="wrapperTmp">
+        {{each result as value index}}
+            <li class="{{if index==0}}active{{/if}}" data-titleid="{{value.titleId}}"><a href="#">{{value.title}}</a></li>
+        {{/each}}
+    </script>
+
+    <script type="text/html" id="baicaijiaTmp">
+        {{each result as value index}}
+            <li>
+                <div class="content">
+                    <div class="imgPic pull-left">
+                        {{#value.productImg}}
+                    </div>
+                    <div class="imgInfo">
+                        <div class="img-title">{{#value.productName}} </div>
+                        <div class="price">{{#value.productPrice}}</div>
+            
+                        <div class="bar clearfix">{{#value.productCouponRemain}}</div>
+                        <div class="productCoupon">{{#value.productCoupon}}</div>
+                        <div class="productHref">{{#value.productHref}}</div>
+                    </div>
+                </div>
+            </li>
+        {{/each}}
+    </script>
+
+
+<script src="./lib/jquery/jquery.js"></script>
+<script src="./lib/bootstrap/js/bootstrap.js"></script>
+<script src="./lib/template/template.js"></script>
+<script src="./lib/iscroll/iscroll.js"></script>
+<script src="./js/baicaijia.js"></script>
+
+</body>
+</html>
